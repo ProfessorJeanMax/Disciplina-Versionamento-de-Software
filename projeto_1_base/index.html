@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 1 - Formulário</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #4CAF50;
+            padding: 0 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .acoes {
+            text-align: center;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        figure {
+            margin-top: 30px;
+        }
+
+        figcaption h2 {
+            margin: 10px 0 0 0;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            /* centraliza as figures na tela */
+            gap: 40px;
+            /* espaço entre elas */
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="resultado.html">
+        <!-- Informações Pessoais -->
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
+        </fieldset>
+
+        <!-- Informações Extras -->
+        <fieldset>
+            <legend>Informações Extras</legend>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+
+            <label for="comida">Comida Favorita:</label>
+            <select id="comida" name="comida">
+                <option value="">Selecione...</option>
+                <option value="Bolo de chocolate">Bolo de chocolate</option>
+                <option value="Bolo de cenoura">Bolo de cenoura</option>
+                <option value="Bolo de abacaxi">Bolo de abacaxi</option>
+            </select>
+        </fieldset>
+
+        <!-- Ações -->
+        <fieldset class="acoes">
+            <legend>Ações</legend>
+            <!-- <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> -->
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </fieldset>
+    </form>
+
+    <!-- Link existente -->
+    <div class="galeria">
+        <figure>
+            <a href="tags.html">
+                <img width="200" height="150"
+                    src="https://cdn.prod.website-files.com/6399c61683700ed8ab159d36/639fb85066f416b5bf185fcf_Ciclo-de-vida-de-um-projeto.png" />
+                <figcaption>
+                    <h2>TAGS_HTML</h2>
+                </figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="receitas/listas_culinarias.html">
+                <img width="200" height="150" src="receitas/imagens/receitas.png" />
+                <figcaption>
+                    <h2>Receitas</h2>
+                </figcaption>
+            </a>
+        </figure>
+    </div>
+</body>
+
+</html>

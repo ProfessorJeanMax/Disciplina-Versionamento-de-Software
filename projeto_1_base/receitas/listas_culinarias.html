@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Âncoras</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        figure {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0;
+            /* Garante que a figura tenha um tamanho controlado */
+            width: 200px; 
+        }
+        img {
+            max-width: 100%;
+            /* Remove a borda padrão que alguns navegadores colocam em imagens dentro de links */
+            border: none; 
+        }
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #333;
+        }
+        a {
+            /* Remove o sublinhado padrão dos links */
+            text-decoration: none; 
+            color: inherit; /* Faz o link herdar a cor do elemento pai (figcaption) */
+        }
+        /* Estilo para quando passar o mouse sobre o link/imagem */
+        a:hover img {
+            opacity: 0.8;
+        }
+        a:hover figcaption {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Minhas receitas culinárias</h1>
+
+    <div class="galeria">
+        <!-- Imagem 1 -->
+        <figure>
+            <!-- O elemento <a> envolve a imagem e a legenda para torná-los clicáveis juntos -->
+            <a href="bolo_abacaxi.html" title="Ir para a Página 1">
+                <img width="200" height="200" src="./imagens/bolo_abacaxi.jpg" alt="Bolo de abacaxi">
+                <figcaption>Bolo de abacaxi</figcaption>
+            </a>
+        </figure>
+
+        <!-- Imagem 2 -->
+        <figure>
+            <a href="bolo_chocolate.html" title="Ir para a Página 2">
+                <img width="200" height="200" src="./imagens/bolo_chocolate.jpg" alt="Bolo de chocolate">
+                <figcaption>Bolo de chocolate</figcaption>
+            </a>
+        </figure>
+
+        <!-- Imagem 3 -->
+        <figure>
+            <a href="bolo_cenoura.html" title="Ir para a Página 1">
+                <img width="200" height="200" src="./imagens/bolo_cenoura.jpeg" alt="Bolo de cenoura">
+                <figcaption>Bolo de cenoura</figcaption>
+            </a>
+        </figure>
+    </div>
+    <div>
+        <p><a href="../index.html">⬅ Voltar</a></p>
+    </div>
+</body>
+</html>
